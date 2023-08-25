@@ -108,3 +108,57 @@ export default {
   transform-origin: 0% 0%;
 }
 </style>
+
+
+<!-- 
+  const jornadas = [
+
+  {
+
+    jornada: {},
+
+    vueltas: [{nvuelta: 1}, {nvuelta: 2}]
+
+  },
+
+  {
+
+    jornada: {},
+
+    vueltas: [{nvuelta: 1}, {nvuelta: 2}, {nvuelta: 3}, {nvuelta: 4}]
+
+  },
+
+  {
+
+    jornada: {},
+
+    vueltas: [{nvuelta: 1}, {nvuelta: 2}, {nvuelta: 3}]
+
+  }
+
+]
+
+ 
+
+// Vueltas juntas
+
+const vueltas = jornadas.map(jornada => jornada.vueltas).flat()
+
+ 
+
+// Obtener numeros de vueltas
+
+const nvueltas = vueltas.map(vuelta => vuelta.nvuelta)
+
+const nvueltasUnicos = [...new Set(nvueltas)]
+
+ 
+
+console.log(nvueltasUnicos)
+
+for (const nvueltaUnico of nvueltasUnicos) {
+
+    console.log(vueltas.filter(vuelta => vuelta.nvuelta === nvueltaUnico))
+
+} -->
