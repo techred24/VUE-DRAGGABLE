@@ -35,6 +35,17 @@ export default {
     Container,
     Draggable
   },
+  async created () {
+    // const response = 
+    const response = await fetch('http://localhost:5001/smg/api/vuelta/dialaboral/5d533c469ccaad0a04447557/7-7-2023', {
+        headers: {
+        'Authorization': `Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI1ZDg5NzY0MzZkMjgxZDRlYzMwNTk1N2EiLCJyb2wiOnsiY29kaWdvIjoiOTkifSwiaWF0IjoxNjkyNjU3MDc5fQ.EoMlDI48fbtmFtP22J6OFju0wYlA0B5ETp3nB5ud6rM`
+        }
+    });
+    const data = await response.json();
+    console.log(data);
+    
+  },
   data () {
     return {
       cards: {...initialCards},
